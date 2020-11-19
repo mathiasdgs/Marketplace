@@ -1,0 +1,538 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #ce0033;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+}
+
+/* <---------------------------------------- Page Home --------------------------------------> */
+
+#formulaire {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 2vh;
+  left: 2vh;
+}
+
+#page-container,
+#back-office-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+#products-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+  border-top: 0.5vh solid black;
+  margin-top: -0.5vh;
+  padding: 0 6%;
+  height: 88vh;
+  top: 12vh;
+  background-image: url(background-simplon-pattern.svg);
+  background-color: #f9f9f9;
+
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+#switch-back-office {
+  position: fixed;
+  top: 1vh;
+  right: 2vw;
+  background-color: red;
+  color: white;
+  border: 2px solid white;
+  font-weight: bold;
+  font-size: 4vmin;
+  text-decoration: none;
+  padding: 0.8vw 1vw;
+}
+
+#switch-front {
+  position: fixed;
+  top: 1vh;
+  right: 2vw;
+  background-color: green;
+  color: white;
+  border: 2px solid white;
+  font-weight: bold;
+  font-size: 4vmin;
+  text-decoration: none;
+  padding: 0.8vw 1vw;
+}
+
+#switch-back-office:hover {
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+}
+
+#switch-front:hover {
+  background-color: white;
+  color: green;
+  border: 2px solid green;
+}
+
+#search-input {
+  position: fixed;
+  top: 2vh;
+  height: 58px;
+
+  width: 19vw;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  font-size: 1.3vw;
+  padding: 0 1.3rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+}
+
+#search-button {
+  position: fixed;
+
+  top: 2vh;
+  left: 21vw;
+  height: 58px;
+  width: 5vw;
+
+  background-image: url(loupe.png);
+  background-size: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  border: 2px white solid;
+  font-weight: bold;
+  border-radius: 0 30px 30px 0;
+}
+
+#search-button:hover {
+  background-color: white;
+  color: black;
+  border: 2px black solid;
+}
+.img-market {
+  position: fixed;
+  top: 2vh;
+  left: 43vw;
+  width: 11vw;
+  height: 8vh;
+  margin: auto;
+  border-radius: 3%;
+}
+#select-categories {
+  position: fixed;
+  top: 2vh;
+  left: 68vw;
+  height: 58px;
+  width: 20vw;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+
+  font-size: 1.1rem;
+  padding: 0 1.3rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+}
+
+#search-input:focus::placeholder {
+  color: transparent;
+}
+
+.popo {
+  height: 48vh;
+  width: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid silver;
+  border-radius: 4%;
+  margin: 8vh;
+  box-shadow: 0 14px 28px silver, 0 10px 10px silver;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+}
+.submitBtn {
+  opacity: 0;
+  position: absolute;
+}
+.product-name {
+  margin-top: 8px;
+}
+
+.product-img {
+  height: 28vh;
+  width: 20vh;
+  margin: 2vh auto;
+}
+.hr-product {
+  box-shadow: 0 3px 4px silver, 0 3px 3px silver;
+  color: #dedede;
+  opacity: 50%;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.2em;
+  color: white;
+  background-color: #ce0033;
+  padding: 7px;
+  border-radius: 8%;
+  margin: 10px auto;
+  display: inline-block;
+}
+
+.opacity {
+  opacity: 0%;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  width: 40vh;
+  height: 12vh;
+}
+
+/* --------------------------------Page Produit détail------------------------------------> */
+#product-detail {
+  height: 70vh;
+  width: 60vw;
+  background-color: #fefefe;
+  position: absolute;
+  top: 12vh;
+  margin: 0 17vw;
+  border-radius: 5%;
+
+  flex-wrap: nowrap;
+  border: 1px solid silver;
+  box-shadow: 0 14px 28px silver, 0 10px 10px silver;
+  padding: 40px;
+}
+.main-product {
+  height: 55vh;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.retourBtn {
+  padding: 10px;
+  background-color: #ce0033;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 2%;
+  border-radius: 3%;
+}
+
+.product-detail-container {
+  text-align: center;
+  background-image: url(background-simplon-pattern.svg);
+  background-color: #f9f9f9;
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+#product-detail img {
+  padding: 5%;
+  width: 18vw;
+  height: 40vh;
+}
+.product-head {
+  width: 80%;
+
+  text-align: center;
+  margin: 7%;
+}
+.product-head p {
+  text-align: justify;
+  margin-top: 30px;
+  overflow: scroll;
+  height: 25vh;
+}
+#vendor-container img {
+  height: 30px;
+  width: 30px;
+  padding: 0;
+  margin: 0 auto;
+}
+#vendor-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: hotpink;
+  display: inline;
+  height: 20vh;
+  width: 10vw;
+  border: solid 2px silver;
+  font-size: 13px;
+}
+.column {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.price-vendor {
+  font-weight: 700;
+}
+.vendor {
+  border-radius: 6%;
+  margin: -30px 50px;
+  background-color: #dedede;
+  box-shadow: 0 7px 14px silver, 0 10px 10px silver;
+  transition-duration: 0.7s;
+}
+.vendor:hover {
+  background-color: #ce0033;
+  color: #dedede;
+}
+
+.tiny-text {
+  font-size: 9px;
+}
+
+/* <------------------------------------------ Parti Back Office ------------------------------6> */
+
+#back-office-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url(background-simplon-pattern.svg);
+  background-color: #f9f9f9;
+}
+
+#back-office-products,
+#back-office-vendors,
+#back-office-categories,
+#back-office-brands {
+  border: 1px solid black;
+  height: 35vh;
+  width: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.switch-to-back {
+  position: absolute;
+  top: 1vw;
+  right: 2vw;
+  background-color: red;
+  color: white;
+  border: 2px solid white;
+  font-weight: bold;
+  font-size: 4vmin;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.8vw 1vw;
+}
+
+.switch-to-back:hover {
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+}
+
+#back-office-products {
+  position: fixed;
+  top: 10vh;
+  left: 25vw;
+  background-color: red;
+  color: white;
+  font-size: 5vmin;
+  font-weight: bold;
+}
+
+#back-office-products:hover {
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+}
+
+#back-office-vendors {
+  position: fixed;
+  top: 10vh;
+  right: 25vw;
+  background-color: green;
+  color: white;
+  font-size: 5vmin;
+  font-weight: bold;
+}
+
+#back-office-vendors:hover {
+  background-color: white;
+  color: green;
+  border: 2px solid green;
+}
+
+#back-office-categories {
+  position: fixed;
+  bottom: 10vh;
+  left: 25vw;
+  background-color: orange;
+  color: white;
+  font-size: 5vmin;
+  font-weight: bold;
+}
+
+#back-office-categories:hover {
+  background-color: white;
+  color: orange;
+  border: 2px solid orange;
+}
+
+#back-office-brands {
+  position: fixed;
+  bottom: 10vh;
+  right: 25vw;
+  background-color: blue;
+  color: white;
+  font-size: 5vmin;
+  font-weight: bold;
+}
+
+#back-office-brands:hover {
+  background-color: white;
+  color: blue;
+  border: 2px solid blue;
+}
+
+.switch-to-back {
+  position: absolute;
+  top: 1vw;
+  right: 2vw;
+  background-color: red;
+  color: white;
+  border: 2px solid white;
+  font-weight: bold;
+  font-size: 4vmin;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.8vw 1vw;
+}
+
+.switch-to-back:hover {
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+}
+
+#back-office-products-display {
+  margin-top: 12vh;
+}
+
+.product-button-update {
+  display: block;
+  position: relative;
+  top: 0;
+  right: -94vw;
+  height: 2vw;
+  width: 2vw;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  font-size: 3vmin;
+  text-decoration: none;
+  text-align: center;
+}
+
+.product-button-delete {
+  display: block;
+  position: relative;
+  bottom: 0;
+  right: -94vw;
+  height: 2vw;
+  width: 2vw;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 3vmin;
+  text-decoration: none;
+  text-align: center;
+}
+
+.products-element {
+  border: 1px solid black;
+  padding: 1vmin;
+  margin: 2vmin;
+}
+
+.products-element p {
+  margin: 1vmin 0 1vmin 0;
+}
+
+#product-add {
+  position: absolute;
+  top: 1.2vw;
+  left: 1vw;
+  height: 3vw;
+  width: 15vw;
+  border: 1px solid black;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 2vmin;
+  cursor: pointer;
+}
+
+.apparition {
+  animation: fadein 1.4s;
+  -moz-animation: fadein 1.4s; /* Firefox */
+  -webkit-animation: fadein 1.4s; /* Safari et Chrome */
+  -o-animation: fadein 1.4s; /* Opera */
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  /* sur Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  /* sur Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.hidden {
+  display: none !important;
+}

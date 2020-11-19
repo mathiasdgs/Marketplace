@@ -1,0 +1,92 @@
+body
+{
+	background-color: #f8f8f8;
+	background-image: url(background-simplon-pattern.svg);
+}
+
+.vendors-element
+{
+	  background-color:#f0ead6;
+	  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	  margin-top: 20px;
+	  border-radius: 15px;
+
+  padding: 2vw 1vw;
+  font-weight: bold;
+}
+
+.vendors-element:hover
+{
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.switch-to-back {
+  position: absolute;
+  top: 1vw;
+  right: 2vw;
+  color: black;
+  font-weight: bold;
+  font-size: 4vmin;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.8vw 1vw;
+	  background-color:#f0ead6;
+	  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	  border-radius: 15px;
+
+}
+
+.switch-to-back:hover {
+  background-color: white;
+  color: red;
+  border: 2px solid red;
+
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+
+#vendor-add
+{
+	  background-color:#f0ead6;
+	  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	  margin-top: 20px;
+	  border-radius: 5px;
+	  color:black;
+	  text-decoration: none;
+
+  padding: 0.8vw 1vw;
+  font-weight: bold;
+}
+
+
+#vendor-add:hover
+{
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.vendor-button-delete
+{
+	  background-color:darkred;
+	  margin-top: 20px;
+	  border-radius: 5px;
+	  color:black;
+	  text-decoration: none;
+
+  padding: 0.8vw 1vw;
+  font-weight: bold;
+
+}
+
+.vendor-button-update
+{
+	  background-color:orange;
+	  margin-top: 20px;
+	  border-radius: 5px;
+	  color:black;
+	  text-decoration: none;
+
+  padding: 0.8vw 1vw;
+  font-weight: bold;
+
+}
